@@ -1,6 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # This will allow all domains; you can customize this as needed
+
+# Your existing code...
 
 # Helper function to extract highest lowercase alphabet
 def get_highest_lowercase(alphabets):
